@@ -12,8 +12,10 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        const h1Tag = <h1>Hello world!</h1>;
-        console.log(h1Tag);
+        const divRoot = document.querySelector('#root');
+        const name = 'Goku';
+        const h1Tag = <h1> Hello my name is {name} </h1>;
+        ReactDOM.render(h1Tag, divRoot);
     </script>
 </body>
 </html>
