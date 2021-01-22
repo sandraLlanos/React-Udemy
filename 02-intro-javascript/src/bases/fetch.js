@@ -3,7 +3,7 @@
 const apiKey = 'XRnsOEVygIHs5bH4hMpOall24oypnnmH';
 const request =  fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
 
-/** this code is more defficult to understan and maintain  **/
+/** this code is more defficult to understand  **/
 // request.then( response => {
 //     response.json().then(jsonResponse => {
 //         console.log(jsonResponse);
