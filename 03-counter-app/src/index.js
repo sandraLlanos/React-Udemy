@@ -1,7 +1,14 @@
 // Example to render element
 import React from 'react'
 import ReactDOM from 'react-dom'
-import FirstApp from './FirstApp' 
+// import FirstAppDataTypes from './FirstAppDataTypes';
+// import FirstAppWithProps from './FirstAppWithProps';
+// import FirstAppPropTypes from './FirstAppPropTypes' 
+// import FirstAppWithDestProps from './FirstAppWithDestProps' 
+// import FirstAppReturnFragment from './FirstAppReturnFragment' 
+// import FirstAppWithDefaultProps from './FirstAppWithDefaultProps' 
+// import FirstAppDefaultPropsV2 from './FirstAppDefaultPropsV2';
+import CounterApp from './CounterApp';
 import './index.css'
 
 // console.log('Hello World!');
@@ -14,4 +21,11 @@ import './index.css'
 // ReactDOM.render(greeting, divRoot);
 
 const divRoot = document.querySelector('#root');
-ReactDOM.render(<FirstApp />, divRoot);
+// ReactDOM.render(<FirstAppReturnFragment />, divRoot);
+// ReactDOM.render(<FirstAppDataTypes />, divRoot);
+// ReactDOM.render(<FirstAppWithProps greeting="Hello, I am Goku" />, divRoot);
+// ReactDOM.render(<FirstAppWithDestProps greeting="Hello, I am Goku" />, divRoot);
+// ReactDOM.render(<FirstAppWithDefaultProps />, divRoot);
+// ReactDOM.render(<FirstAppPropTypes />, divRoot);
+// ReactDOM.render(<FirstAppDefaultPropsV2 />, divRoot);
+ReactDOM.render(<CounterApp value={123} />, divRoot);
