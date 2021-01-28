@@ -5,3 +5,32 @@ html, body {
    font-size: 1.3rem;
    padding: 70px;
 }
+.wrapper {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 0 auto;
+   text-align: center;
+}
+h2 + div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5%;
+}
+button {
+   padding: 2%;
+   font-size: 1.3rem;
+   width: 30%;
+   background-color: #ff4500de;
+   border-color: orangered;
+   color: white;
+   border-radius: 5%;
+   box-shadow: 5px 3px 8px -1px #dcdcdc80;
+   outline: none;
+}
+button:active{
+   background-color: orangered;
+   box-shadow: 5px 3px 8px 1px #dcdcdc80;
+}
