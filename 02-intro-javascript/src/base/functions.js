@@ -13,20 +13,24 @@ const greetingArrow = name => `Hello ${name}`;
 // }
 
 // using implicit object
-const greetingArrow2 = () => ({
+export const greetingArrow2 = () => ({
+        uuid: 'ABC123',
+        userName: 'Sandra M'
+});
+export const getUser = () => ({
         uuid: 'ABC123',
         userName: 'Sandra M'
 });
 
-const getUsuarioActivo = nombre => ({
+export const getActiveUser = name => ({
         uuid: 'ABC123',
-        userName: nombre
-    })
+        userName: name
+})
 
-const usuarioActivo = getUsuarioActivo('sandra');
+const activeUser = getActiveUser('sandra');
 
-console.log('usuarioActivo', getUsuarioActivo('Marcela'));
-console.log('usuarioActivo', usuarioActivo);
+console.log('activeUser', getActiveUser('Marcela'));
+console.log('activeUser', activeUser);
 console.log(greeting('sandra'));
 console.log(greetingArrow2());
 console.log(greetingArrow('marcela'));
