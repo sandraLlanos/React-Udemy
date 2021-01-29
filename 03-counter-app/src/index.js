@@ -28,4 +28,4 @@ const divRoot = document.querySelector('#root');
 // ReactDOM.render(<FirstAppWithDefaultProps />, divRoot);
 // ReactDOM.render(<FirstAppPropTypes />, divRoot);
 // ReactDOM.render(<FirstAppDefaultPropsV2 />, divRoot);
-ReactDOM.render(<CounterApp value={123} />, divRoot);
+ReactDOM.render(<CounterApp value={10} />, divRoot);
