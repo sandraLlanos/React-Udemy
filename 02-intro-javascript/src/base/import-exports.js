@@ -5,5 +5,5 @@ console.log(owners);
 export const getHeroeById = (id) => heroes.find(hero => hero.id === id );
 console.log(getHeroeById(5));
 
-const getHeroeByOwner = (owner) => heroes.filter( hero => hero.owner === owner );
+export const getHeroeByOwner = (owner) => heroes.filter( hero => hero.owner === owner );
 console.log(getHeroeByOwner('DC'));
