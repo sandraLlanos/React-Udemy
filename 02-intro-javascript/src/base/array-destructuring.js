@@ -7,7 +7,7 @@ console.log(characters[0]);
 const [ , , p3 ] = characters;
 console.log(p3);    
 
-const returnArray = () => {
+export const returnArray = () => {
     return ['ABC', 123];
 };
 
