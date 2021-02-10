@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in <FirstAppDefaultPropsV2 /> component should show <FirstAppDefaultPropsV2> correctly 1`] = `
+<Fragment>
+  <h1>
+     
+    I'm a title
+     
+  </h1>
+  <p>
+     
+    I'm a subtitle
+     
+  </p>
+</Fragment>
+`;

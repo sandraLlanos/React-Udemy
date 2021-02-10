@@ -7,8 +7,8 @@ import ReactDOM from 'react-dom'
 // import FirstAppWithDestProps from './FirstAppWithDestProps' 
 // import FirstAppReturnFragment from './FirstAppReturnFragment' 
 // import FirstAppWithDefaultProps from './FirstAppWithDefaultProps' 
-// import FirstAppDefaultPropsV2 from './FirstAppDefaultPropsV2';
-import CounterApp from './CounterApp';
+import FirstAppDefaultPropsV2 from './FirstAppDefaultPropsV2';
+// import CounterApp from './CounterApp';
 import './index.css'
 
 // console.log('Hello World!');
@@ -27,5 +27,5 @@ const divRoot = document.querySelector('#root');
 // ReactDOM.render(<FirstAppWithDestProps greeting="Hello, I am Goku" />, divRoot);
 // ReactDOM.render(<FirstAppWithDefaultProps />, divRoot);
 // ReactDOM.render(<FirstAppPropTypes />, divRoot);
-// ReactDOM.render(<FirstAppDefaultPropsV2 />, divRoot);
-ReactDOM.render(<CounterApp value={10} />, divRoot);
+ReactDOM.render(<FirstAppDefaultPropsV2 greeting="Hello"/>, divRoot);
+// ReactDOM.render(<CounterApp value={10} />, divRoot);
