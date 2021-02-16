@@ -27,7 +27,7 @@ const CounterApp = ({ value = 10 }) => {
     return (
         <div className="wrapper">
            <h1>CounterApp</h1>
-           <h2> Initial Value:{ value } </h2> 
+           <h1> Initial Value:{ value } </h1> 
            <h2> { counter } </h2> 
             <div>
                 {/* <button onClick={ (e) => handleAdd(e) }>+1</button> */}
