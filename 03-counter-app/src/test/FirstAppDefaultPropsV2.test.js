@@ -16,11 +16,25 @@ describe('test in <FirstAppDefaultPropsV2 /> component', () => {
     })
 
     test('should show <FirstAppDefaultPropsV2> correctly', () => {
-        const saludo = "Hello";
-        const wrapper = shallow(<FirstAppDefaultPropsV2 greeting={saludo} />)
+        const greeting = "Hello";
+        const wrapper = shallow(<FirstAppDefaultPropsV2 title={greeting} />)
         expect( wrapper ).toMatchSnapshot();
+    });
 
+    test('should show the subtitle sended by props', () => {
+        const greeting = "Hello";
+        const subtitle = "I'm a subtitle";
+        const wrapper = shallow(
+        <FirstAppDefaultPropsV2
+            title={greeting}
+            subtitle={subtitle}
+        />
+        )
+        const pText = wrapper.find('p').text();
+        console.log(pText);
+        expect( pText ).toBe(subtitle);
     })
+    
     
     
 
