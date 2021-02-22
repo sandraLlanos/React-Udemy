@@ -11,7 +11,7 @@ function GifExpertApp() {
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategory />
+            <AddCategory setCategories={ setCategories } />
             <hr/> 
             {/* <button onClick={ handleadd }>Add</button> */}
             
