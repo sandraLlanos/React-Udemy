@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const GifGrid = ( {category } ) => {
 
+    const [counter, setCounter] = useState(0); //for each call to Counter, the click makes a call to HTTP, for that reason we will use useEffect ()
+    useEffect( () => {
+        // receives the function I want to execute
+        getGifs()
+    }, [])
     const getGifs = async() => {
         const apiUrl = 'https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=XRnsOEVygIHs5bH4hMpOall24oypnnmH';
 
@@ -18,12 +23,13 @@ export const GifGrid = ( {category } ) => {
         console.log(gifs);
     }
 
-    getGifs();
+    // getGifs();
 
     return (
         <>
             <h3> {category} </h3>
-            
+            <h2>{counter}</h2>
+            <button onClick={() => setCounter( counter + 1 )}>click</button>            
         </>
     )
 }
