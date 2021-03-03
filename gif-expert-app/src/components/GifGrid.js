@@ -32,17 +32,19 @@ export const GifGrid = ( {category } ) => {
     return (
         <>
             <h3> {category} </h3>
-            {/* <h2>{counter}</h2> */}
-            {/* <button onClick={() => setCounter( counter + 1 )}>click</button>  
-            */}
-               {
-                    images.map( img => (
-                        <GifGridItem 
-                            key={img.id}
-                            {...img}
-                         />
-                    ))
-               }
+            <div className="card-grid" >
+                {/* <h2>{counter}</h2> */}
+                {/* <button onClick={() => setCounter( counter + 1 )}>click</button>  
+                */}
+                {
+                        images.map( img => (
+                            <GifGridItem 
+                                key={img.id}
+                                {...img}
+                            />
+                        ))
+                }
+            </div>
         </>
     )
 }
