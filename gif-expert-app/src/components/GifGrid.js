@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { GifGridItem } from './GifGridItem';
 
 export const GifGrid = ( {category } ) => {
 
-    const [counter, setCounter] = useState(0); //for each call to Counter, the click makes a call to HTTP, for that reason we will use useEffect ()
+    const [images, setImages] = useState([]);
+
+    // const [counter, setCounter] = useState(0); //for each call to Counter, the click makes a call to HTTP, for that reason we will use useEffect ()
     useEffect( () => {
         // receives the function I want to execute
         getGifs()
@@ -11,7 +14,7 @@ export const GifGrid = ( {category } ) => {
         const apiUrl = 'https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=XRnsOEVygIHs5bH4hMpOall24oypnnmH';
 
         const resp = await fetch( apiUrl );
-        const {data} = await resp.json();
+        const { data } = await resp.json();
         // console.log(data[0].id)
         const gifs = data.map(img => {
             return {
@@ -20,7 +23,8 @@ export const GifGrid = ( {category } ) => {
                 url: img.images.downsized_medium.url
             }
         })
-        console.log(gifs);
+        // console.log(gifs);
+        setImages( gifs );
     }
 
     // getGifs();
@@ -28,8 +32,17 @@ export const GifGrid = ( {category } ) => {
     return (
         <>
             <h3> {category} </h3>
-            <h2>{counter}</h2>
-            <button onClick={() => setCounter( counter + 1 )}>click</button>            
+            {/* <h2>{counter}</h2> */}
+            {/* <button onClick={() => setCounter( counter + 1 )}>click</button>  
+            */}
+               {
+                    images.map( img => (
+                        <GifGridItem 
+                            key={img.id}
+                            {...img}
+                         />
+                    ))
+               }
         </>
     )
 }
