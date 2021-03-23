@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { getGifs } from '../helpers/GetGifs';
-import { GifGridItem } from './GifGridItem';
+// import React, { useEffect, useState } from 'react'
+// import { getGifs } from '../helpers/GetGifs';
+import React from 'react'
+import { useFetchGifs } from '../hooks/useFetchGifs';
+// import { GifGridItem } from './GifGridItem';
 
 export const GifGrid = ( { category } ) => {
     console.log(category);
 
-    const [images, setImages] = useState([]);
+    const {loading} = useFetchGifs();
+    console.log(loading)
+    // const [images, setImages] = useState([]);
 
     // const [counter, setCounter] = useState(0); //for each call to Counter, the click makes a call to HTTP, for that reason we will use useEffect ()
-    useEffect( () => {
+    // useEffect( () => {
         // receives the function I want to execute
-        getGifs( category )
+        // getGifs( category )
             // .then( imgs => setImages(imgs)) is exactly the same
-            .then( setImages )
-    }, [ category ]) //if the category change 
+            // .then( setImages )
+    // }, [ category ]) //if the category change 
 
     // will be called in GifGrid component
     // const getGifs = async() => {
@@ -38,11 +42,12 @@ export const GifGrid = ( { category } ) => {
     return (
         <>
             <h3> {category} </h3>
-            <div className="card-grid" >
+            { loading ? 'Loading...' : 'Loaded' }
+            {/* <div className="card-grid" > */}
                 {/* <h2>{counter}</h2> */}
                 {/* <button onClick={() => setCounter( counter + 1 )}>click</button>  
                 */}
-                {
+                {/* {
                     images.map( img => (
                         <GifGridItem 
                             key={img.id}
@@ -50,7 +55,7 @@ export const GifGrid = ( { category } ) => {
                         />
                     ))
                 }
-            </div>
+            </div> */}
         </>
     )
 }
