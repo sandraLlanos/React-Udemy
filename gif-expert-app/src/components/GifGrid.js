@@ -41,8 +41,8 @@ export const GifGrid = ( { category } ) => {
 
     return (
         <>
-            <h3> {category} </h3>
-            { loading && <p>Loading...</p> }
+            <h3 className="animate__animated animate__fadeIn" > {category} </h3>
+            { loading && <p className="animate__animated animate__flash" >Loading...</p> }
             <div className="card-grid" >
                 {/* <h2>{counter}</h2> */}
                 {/* <button onClick={() => setCounter( counter + 1 )}>click</button>  
