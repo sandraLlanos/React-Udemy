@@ -4,9 +4,13 @@ exports[`test in <GifGridItem /> should show GifGridItem component successfully 
 <div
   className="card animate__animated animate__fadeIn"
 >
-  <img />
+  <img
+    alt="a title"
+    src="https://localhost/something.jpg"
+  />
   <p>
      
+    a title
      
   </p>
 </div>
