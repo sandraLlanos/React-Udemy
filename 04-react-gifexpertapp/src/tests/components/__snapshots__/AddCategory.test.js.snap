@@ -4,6 +4,10 @@ exports[`test in AddCategory component should show it successfully 1`] = `
 <form
   onSubmit={[Function]}
 >
+  <p>
+     
+     
+  </p>
   <input
     onChange={[Function]}
     type="text"
