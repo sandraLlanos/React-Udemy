@@ -1,4 +1,5 @@
 import React from 'react';
+import '@testing-library/jest-dom';
 import { GifGrid } from "../../components/GifGrid";
 import { shallow } from "enzyme";
 import { useFetchGifs } from '../../hooks/useFetchGifs';
@@ -24,13 +25,15 @@ describe('test in <GifGrid /> component', () => {
             id: 'ABC',
             title: 'anything',
             url: 'https://localhost/anything.jpg'
-        }]
+        }];
         useFetchGifs.mockReturnValue({
             data: gifs,
             loading: false
         });
         const wrapper = shallow( <GifGrid category={category} />)
         expect(wrapper).toMatchSnapshot();
+        expect( wrapper.find('p').exists() ).toBe(false);
+        expect( wrapper.find('GifGridItem').length ).toBe(gifs.length);
 
     });
 
